@@ -1,0 +1,11 @@
+/* ======================================================
+   PARTICLES.CSS  –  Hero particle canvas layer
+   ====================================================== */
+
+/* Canvas sits behind hero content */
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}

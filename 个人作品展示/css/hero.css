@@ -1,0 +1,236 @@
+/* ======================================================
+   HERO.CSS  –  Full-viewport landing section (light theme)
+   ====================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  background-color: var(--clr-hero);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ---- Background media ---- */
+.hero__bg-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__bg-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.16;
+  filter: grayscale(20%);
+}
+
+/* Gradient fade so left side reads clearly */
+.hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(244, 243, 238, 0.96) 0%,
+    rgba(244, 243, 238, 0.72) 50%,
+    rgba(244, 243, 238, 0.25) 100%
+  );
+}
+
+/* ---- Particle canvas ---- */
+.hero__particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- Content ---- */
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ---- Eyebrow ---- */
+.hero__eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.45);
+  font-weight: 500;
+  margin-bottom: 20px;
+
+  /* Reveal animation state */
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+.hero__eyebrow.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Title ---- */
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+
+.hero__title-line {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  font-weight: 800;
+  line-height: 1.04;
+  color: #0d0d0d;
+  display: block;
+  letter-spacing: -0.02em;
+
+  /* Reveal initial state */
+  opacity: 0;
+  transform: translateY(44px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+
+.hero__title-line--indent {
+  padding-left: 0.08em;
+  transition-delay: 130ms;
+}
+
+.hero__title-line.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Typed role animation ---- */
+.hero__typed-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  min-height: 1.2em;
+}
+
+.hero__typed {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+  color: rgba(17, 17, 17, 0.55);
+  letter-spacing: -0.01em;
+}
+
+/* Blinking cursor */
+.hero__cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  background: rgba(17, 17, 17, 0.55);
+  border-radius: 2px;
+  animation: blinkCursor 0.85s step-end infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ---- Description ---- */
+.hero__desc {
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: rgba(17, 17, 17, 0.62);
+  margin-bottom: 36px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out) 260ms,
+    transform var(--dur-slow) var(--ease-out) 260ms;
+}
+.hero__desc.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- CTA buttons ---- */
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity var(--dur-slow) var(--ease-out) 380ms,
+    transform var(--dur-slow) var(--ease-out) 380ms;
+}
+.hero__cta.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Social icons ---- */
+.hero__social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  opacity: 0;
+  transition: opacity var(--dur-slow) var(--ease-out) 500ms;
+}
+.hero__social.is-visible { opacity: 1; }
+
+.hero__social a {
+  font-size: 1.25rem;
+  color: rgba(17, 17, 17, 0.48);
+  transition:
+    color var(--dur-fast),
+    transform var(--dur-fast);
+}
+.hero__social a:hover {
+  color: #0d0d0d;
+  transform: translateY(-3px);
+}
+
+/* ---- Scroll hint arrow ---- */
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 1rem;
+  color: rgba(17, 17, 17, 0.40);
+  animation: heroScrollBounce 2.2s ease-in-out infinite;
+  transition: color var(--dur-fast);
+}
+.hero__scroll-hint:hover { color: #0d0d0d; }
+
+@keyframes heroScrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(9px); }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .hero__content { padding: 0 20px; }
+  .hero__title-line { font-size: clamp(2.2rem, 10vw, 4rem); }
+}
