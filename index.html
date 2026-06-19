@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent2026-Li | 个人作品集展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <nav class="bg-gray-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-wide flex items-center">
+                <i class="fa-brands fa-github text-2xl mr-2 text-indigo-400"></i> Agent2026-Li . Portfolio
+            </span>
+            <div class="space-x-6 text-sm">
+                <a href="#about" class="text-gray-300 hover:text-white transition">关于我</a>
+                <a href="#java-projects" class="text-gray-300 hover:text-white transition">Java 微服务</a>
+                <a href="#python-projects" class="text-gray-300 hover:text-white transition">Python AI/Agent</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-4 border-indigo-500 shadow-xl">
+                <img src="https://avatars.githubusercontent.com/u/Agent2026-Li" alt="Agent2026-Li Avatar" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80'">
+            </div>
+            
+            <h1 class="text-3xl font-extrabold sm:text-4xl">Agent2026-Li</h1>
+            <p class="mt-3 text-lg text-gray-400 max-w-2xl mx-auto">
+                后端开发工程师 | 主攻 Java 高并发微服务架构 与 Python 大模型 Agent / RAG 应用
+            </p>
+            
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <img class="w-full rounded-lg shadow-md border border-gray-700" src="https://github-readme-stats.vercel.app/api?username=Agent2026-Li&show_icons=true&theme=dark&height=150" alt="GitHub Stats">
+                <img class="w-full rounded-lg shadow-md border border-gray-700" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Agent2026-Li&layout=compact&theme=dark&height=150" alt="Top Langs">
+            </div>
+
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="https://github.com/Agent2026-Li" target="_blank" class="inline-flex items-center px-5 py-2.5 border border-gray-600 shadow-sm text-sm font-medium rounded-md text-gray-200 bg-gray-800 hover:bg-gray-700 transition">
+                    <i class="fa-brands fa-github mr-2 text-lg"></i> 访问我的 GitHub
+                </a>
+                <a href="mailto:2839577861@qq.com" class="inline-flex items-center px-5 py-2.5 text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 shadow-md transition">
+                    <i class="fa-solid fa-envelope mr-2"></i> 联系我 (QQ邮箱)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12">
+
+        <section id="java-projects" class="mb-16">
+            <div class="border-l-4 border-amber-500 pl-3 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center">
+                    <i class="fa-brands fa-java text-amber-500 mr-2 text-3xl"></i> Java 核心重型作品
+                </h2>
+                <p class="text-gray-500 text-sm mt-1">展示微服务生态、高并发设计、工程健壮性及标准规范</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 mb-8 hover:shadow-lg transition duration-300">
+                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-7 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">分布式重构</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">高并发秒杀</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">🚀 基于 Spring Cloud Alibaba 的分布式微服务架构系统</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                针对经典业务场景设计的分布式微服务后端系统。实现了服务注册发现、分布式链路追踪、全链路限流熔断，并专门针对大流量高并发场景进行了架构级优化。
+                            </p>
+                            
+                            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
+                                <li><strong>高并发库存扣减</strong>：利用 <span class="text-amber-600 font-semibold">Redis + Lua 脚本</span> 保证原子性，结合 Sentinel 实现热点参数限流。</li>
+                                <li><strong>异步削峰解耦</strong>：引入 <span class="text-amber-600 font-semibold">RocketMQ</span> 异步处理非核心链路，确保分布式事务的最终一致性。</li>
+                                <li><strong>工程健壮性规范</strong>：统一封装全局异常处理拦截器及 R 标准响应体，全量接入 Swagger 接口文档。</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Spring Boot</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Spring Cloud</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Redis</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">RocketMQ</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
+                        <span class="text-xs text-indigo-500 font-semibold mb-2"><i class="fa-solid fa-sitemap mr-1"></i> 架构拓扑 & 数据流可视化</span>
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Java 微服务架构图" class="rounded shadow-sm max-h-48 object-cover mb-4">
+                        <div class="flex space-x-3 w-full">
+                            <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
+                            <a href="#" class="flex-1 text-center bg-amber-500 text-white text-xs py-2 px-3 rounded hover:bg-amber-600 transition"><i class="fa-solid fa-code-branch mr-1"></i> Swagger</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="python-projects" class="mb-16">
+            <div class="border-l-4 border-sky-500 pl-3 mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 flex items-center">
+                    <i class="fa-brands fa-python text-sky-500 mr-2 text-3xl"></i> Python 大模型与轻量交付作品
+                </h2>
+                <p class="text-gray-500 text-sm mt-1">展示大模型 Multi-Agent 工作流、高效 RAG 及全栈原型构建能力</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 mb-8 hover:shadow-lg transition duration-300">
+                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-7 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-sky-100 text-sky-800">Multi-Agent</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">交互级原型</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">🤖 InsightScan: 医疗报告多智能体（Agent）分析服务</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                基于 <span class="text-gray-900 font-semibold">LangGraph 和 LangChain</span> 构建的高级 AI 智能体应用。支持结构化医疗 PDF 报告的自动化提取、多 Agent 协同数据交叉比对及高价值信息的大纲生成。
+                            </p>
+                            
+                            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
+                                <li><strong>复杂的智能体拓扑</strong>：利用 <span class="text-sky-600 font-semibold">LangGraph</span> 实现了图结构的多智能体工作流，具备自动审查与反思（Reflection）纠错机制。</li>
+                                <li><strong>极速前端可视化交付</strong>：利用 <span class="text-sky-600 font-semibold">Streamlit</span> 框架，完成了直观的“上传文件-流式响应-图表生成”全套 UI 交互。</li>
+                                <li><strong>模块化后端设计</strong>：基于 Flask 搭建轻量级 Web 服务层，将 AI 计算节点与传统业务 API 进行规范化解耦。</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Python 3.x</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">LangGraph / LangChain</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Streamlit</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flask</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
+                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-desktop mr-1"></i> 运行交互与 UI 可视化效果 (GIF)</span>
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="InsightScan 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4">
+                        <div class="flex space-x-3 w-full">
+                            <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
+                            <a href="#" class="flex-1 text-center bg-sky-500 text-white text-xs py-2 px-3 rounded hover:bg-sky-600 transition"><i class="fa-solid fa-bolt mr-1"></i> 在线 Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+        <p>© 2026 Agent2026-Li. 保留所有权利.</p>
+        <p class="mt-2 text-xs text-gray-600">Powered by HTML, Tailwind CSS & GitHub Metrics API</p>
+    </footer>
+
+</body>
+</html>
