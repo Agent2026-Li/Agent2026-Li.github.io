@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agent2026-Li | 个人作品集展示</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased">
@@ -30,7 +30,7 @@
             
             <h1 class="text-3xl font-extrabold sm:text-4xl">Agent2026-Li</h1>
             <p class="mt-3 text-lg text-gray-400 max-w-2xl mx-auto">
-                Agent开发工程师 | 主攻 Java 与 Python 大模型 Agent / RAG 应用
+                Agent 开发工程师 | 主攻 Java 与 Python 大模型 Agent / RAG 应用
             </p>
             
             <div class="mt-8 flex justify-center space-x-4">
@@ -71,10 +71,10 @@
                             
                             <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
                             <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
-                                <li><strong>大模型接入与 Agent 架构</strong>：基于 ReAct 模式构建具备自主规划能力的 AI 智能体，利用 Spring AI 统一封装通义、Ollama 等多模型接口，实现任务分解、自主决策与循环执行，最终可联动外部工具自主生成完整反诈要点 PDF 报告。</li>
-                                <li><strong>对话记忆与精准理解</strong>：自主开发基于文件系统的 <strong>ChatMemory</strong>，结合 <strong>Kryo 序列化</strong> 高效持久化历史上下文；并实现 <code>Re-Reading Advisor</code> 接口引导模型复读解析用户诉求，大幅提升复杂法律条文处理的准确率。</li>
-                                <li><strong>RAG 与向量知识库构建</strong>：集成 <code>QuestionAnswerAdvisor</code> 核心组件，结合 <code>EmbeddingModel</code> 将密集文本转化为语义向量存入 <strong>PGVector</strong> 数据库，同时无缝对接阿里云百炼知识库，强化垂直领域问答精度。</li>
-                                <li><strong>多源工具调用与 MCP 协议</strong>：利用自研注解机制扩展 AI 能力边界，封装网页搜索、本地文件操作等工具；通过本地 Stdio 模式创造性集成<strong>高德地图 MCP</strong>，赋能 AI 结合地理空间位置进行精准反诈提醒与危险预测。</li>
+                                <li><strong>大模型接入与 Agent 架构</strong>：基于 ReAct 模式构建具备自主规划能力的 AI 智能体，利用 Spring AI 统一封装多模型接口，实现任务分解与决策循环，并联动工具链自主生成完整反诈要点 PDF 报告。</li>
+                                <li><strong>对话记忆与精准理解</strong>：自主开发基于文件系统的 <strong>ChatMemory</strong>，结合 <strong>Kryo 序列化</strong> 高效持久化历史上下文；实现 <code>Re-Reading Advisor</code> 引导模型复读解析诉求，大幅提升复杂法律条文处理准确率。</li>
+                                <li><strong>RAG 与向量知识库构建</strong>：集成 <code>QuestionAnswerAdvisor</code> 核心组件，结合 <code>EmbeddingModel</code> 将密集文本转化为语义向量存入 <strong>PGVector</strong> 数据库，同时对接阿里云百炼知识库，强化问答精度。</li>
+                                <li><strong>多源工具调用与 MCP 协议</strong>：利用自研注解机制扩展能力边界，封装网页搜索等工具；通过本地 Stdio 模式集成<strong>高德地图 MCP</strong>，赋能 AI 结合地理空间位置进行精准地理反诈预测。</li>
                             </ul>
                         </div>
                         
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
-                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-desktop mr-1"></i> Streamlit 可视化交互原型 (GIF)</span>
+                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-desktop mr-1"></i> Streamlit 可视化交互原型</span>
                         <img src="./img/微信图片_2026-04-26_101746_233.jpg" alt="SmartRecruit 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80'">
                         <div class="flex space-x-3 w-full">
                             <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
@@ -155,53 +155,37 @@
                     <div class="lg:col-span-7 flex flex-col justify-between">
                         <div>
                             <div class="flex items-center space-x-2 mb-3">
-                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Ollama 本地化</span>
-                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">ReAct 调度</span>
-                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">ChromaDB</span>
-                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">结构化输出增强</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">全局热加载单例</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">ReAct 路由</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-800">Streamlit 宽屏看板</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">会话隔离</span>
                             </div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">🤖 InsightScan 智扫通｜扫地机器人智能问答与报告生成 Agent 系统</h3>
                             <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                                <strong>项目描述：</strong> 专为扫地机器人量身定制的私有化大模型智能体系统。通过本地轻量大模型驱动，打通了“多源文档知识库问答（RAG）”与“外部业务数据库参数抽取生成报告”两条核心链路。
+                                <strong>项目描述：</strong> 专为智能扫地机器人硬件量身定制的端到端 Agent 服务中台。系统在离线私有化部署环境下，不仅能通过本地 RAG 库高可用作答硬件错误，更实现了一键自然语言提取结构化槽位（User_ID、Month），动态路由调度 Pandas 引擎完成全自动使用报告渲染。
                             </p>
                             
-                            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
+                            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点（高并发架构级重构）：</h4>
                             <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
-                                <li><strong>基于 ReAct 的多工具路由调度</strong>：利用 LangChain 封装 ReAct 思考看板，让 Agent 具备根据用户意图自主决策的能力。当遇到设备操作疑问时路由至本地 RAG 工具，当收到“分析特定月份使用情况”时则自动切换至报告生成流。</li>
-                                <li><strong>多源数据融合 RAG 本地知识库</strong>：基于 ChromaDB 持久化向量库，支持 PDF、DOCX 硬件说明书及 CSV 格式的用户行为日志解析，使用 <code>bge-m3</code> 模型进行高性能本地 Embedding，提供高可用的设备知识检索问答。</li>
-                                <li><strong>端到端报告生成流水线</strong>：实现大模型参数提取机制。Agent 自动捕获用户自然语言中的 <code>User_ID</code> 与 <code>Month</code>，触发 Pandas 自动检索底层业务数据中的多维度清洁轨迹和报错频率，最终由 <code>Qwen3</code> 渲染输出深度定制的使用分析报告。</li>
-                                <li><strong>小模型工具调用容错增强（亮点）</strong>：针对本地轻量化模型 JSON 输出不稳定、易格式崩溃的问题，使用 <strong>Pydantic 协议硬约束</strong> 结合 <strong>自定义正则表达式防御解析网关</strong>，使小模型在离线私有化环境下的 Tool Calling 稳定性跃升。</li>
-                                <li><strong>多触点交互交付与生产级评测</strong>：后端基于 Flask 搭建标准的 Web 服务接口，前端快速构建 Gradio/Streamlit 可视化客户端；并通过 ROUGE、BERTScore 以及 Faithfulness（忠实度）指标建立了一套完善的 RAG 幻觉量化压测框架。</li>
+                                <li><strong class="text-slate-900">高并发全局单例架构优化</strong>：拒绝在 Flask 路由函数内频繁开销实例化，重构大模型引擎与 <code>ReActAgent</code> 为全局 Singleton 独占单例热加载模式，使系统完美规避生产级并发下的内存抖动与 OOM（内存溢出）崩溃隐患。</li>
+                                <li><strong class="text-slate-900">多用户级会话隔离机制</strong>：设计基于内存并发字典的上下文隔离管理器（<code>USER_MEMORY_STORE</code>），通过客户端特定 <code>uuid</code> 作为哈希路由键进行长上下文的挂载隔离，彻底避免了并发交互环境下多用户间的数据穿透与串扰。</li>
+                                <li><strong class="text-slate-900">自定义全自动正则解析网关</strong>：针对私有化部署下轻量小模型 Tool Calling 偶发的格式失控，设计了高鲁棒性的防御性正则流，对输出的原始 <code>&lt;think&gt;</code> 思考链及脏字符进行全自动化切片与剥离，保障交付至 Streamlit 客户端的是高标准结构化文本。</li>
+                                <li><strong class="text-slate-900">现代化分栏交互看版交付</strong>：采用全新的 Streamlit 进行前后端分离式联调构建。将传统的上下呆板网页升级为**“左侧控制控制台输入、右侧 Agent 实时交互流输出”**的宽屏生产级 UI 看板，集成 Spinner 异步加载与气泡弹窗，体验极佳。</li>
                             </ul>
                         </div>
                         
                         <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
-                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Python</span>
-                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">LangChain</span>
-                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Ollama / Qwen3</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flask API</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">LangChain ReAct</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Streamlit 看板</span>
                             <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">ChromaDB</span>
-                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flask & Gradio</span>
-                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Pydantic 容错</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">单例模式</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">正则防御网关</span>
                         </div>
                     </div>
 
                     <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
-                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-code mr-1"></i> Gradio / Flask 运行看板</span>
+                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-code mr-1"></i> Streamlit 宽屏交互演示 (GIF/MP4)</span>
                         <img src="./img/insightscan-demo.jpg" alt="InsightScan 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4" onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80'">
                         <div class="flex space-x-3 w-full">
-                            <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm border-t border-gray-800">
-        <p>© 2026 Agent2026-Li. 保留所有权利.</p>
-        <p class="mt-2 text-xs text-gray-600">Powered by HTML, Tailwind CSS & GitHub Pages</p>
-    </footer>
-
-</body>
-</html>
+                            <a
