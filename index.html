@@ -17,7 +17,7 @@
             <div class="space-x-6 text-sm">
                 <a href="#about" class="text-gray-300 hover:text-white transition">关于我</a>
                 <a href="#java-projects" class="text-gray-300 hover:text-white transition">Java AI 平台</a>
-                <a href="#python-projects" class="text-gray-300 hover:text-white transition">Python RAG 系统</a>
+                <a href="#python-projects" class="text-gray-300 hover:text-white transition">Python 大模型应用</a>
             </div>
         </div>
     </nav>
@@ -89,7 +89,7 @@
 
                     <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
                         <span class="text-xs text-indigo-500 font-semibold mb-2"><i class="fa-solid fa-sitemap mr-1"></i> Spring AI 智能体决策流</span>
-                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Spring AI 架构图" class="rounded shadow-sm max-h-48 object-cover mb-4">
+                        <img src="./img/java-flow.jpg" alt="Spring AI 架构图" class="rounded shadow-sm max-h-48 object-cover mb-4" onerror="this.src='https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80'">
                         <div class="flex space-x-3 w-full">
                             <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
                         </div>
@@ -101,9 +101,9 @@
         <section id="python-projects" class="mb-16">
             <div class="border-l-4 border-sky-500 pl-3 mb-8">
                 <h2 class="text-2xl font-bold text-gray-900 flex items-center">
-                    <i class="fa-brands fa-python text-sky-500 mr-2 text-3xl"></i> Python 大模型与轻量交付作品
+                    <i class="fa-brands fa-python text-sky-500 mr-2 text-3xl"></i> Python 大模型应用作品
                 </h2>
-                <p class="text-gray-500 text-sm mt-1">展示大模型 RAG 架构优化、高级混合检索以及工程指标闭环</p>
+                <p class="text-gray-500 text-sm mt-1">展示高级混合检索（RAG）、多智能体（Agent）自动化调度以及工业级指标评测闭环</p>
             </div>
 
             <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 mb-8 hover:shadow-lg transition duration-300">
@@ -123,10 +123,10 @@
                             
                             <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
                             <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
-                                <li><strong>密集稀疏双向量编码 + 深度重排</strong>：基于前沿 <span class="text-sky-600 font-semibold">BGE-M3 嵌入模型</span> 实现精细化的稠密与稀疏向量编码，并挂载 <code>CrossEncoder</code> 进行二次深度重排序，<strong>相较于传统单一向量检索，精准度暴力提升 35%</strong>。</li>
+                                <li><strong>密集稀疏双向量编码 + 深度重排</strong>：基于前沿 BGE-M3 嵌入模型实现精细化的稠密与稀疏向量编码，并挂载 <code>CrossEncoder</code> 进行二次深度重排序，相较于传统单一向量检索，精准度提升 35%。</li>
                                 <li><strong>大模型意图识别与参数抽取</strong>：独立设计大模型意图分析网关，自动将 HR 随意的自然语言招聘诉求进行语义重写与槽位抽取，全面支持 6 大类基础用户意图的精准卡口分类。</li>
-                                <li><strong>简历结构化流水线 (Parent-Child Chunking)</strong>：构建完美支持 PDF/Docx 及基于图像大模型 OCR 识别的结构化抽取组件，通过<strong>父子块切分核心算法优化切片颗粒度</strong>，防止子块检索遗失完整的上下文边界。</li>
-                                <li><strong>专业评测体系指标交付</strong>：使用生产级大模型评测标准框架 <strong>Ragas</strong> 对全链路检索策略进行压测调优，运用混合检索策略成功使系统 <strong>Recall@5（前五项召回率）达到 89%</strong>，整体端到端对话延迟完美收敛在 3~5 秒。</li>
+                                <li><strong>简历结构化流水线 (Parent-Child Chunking)</strong>：构建完美支持 PDF/Docx 及基于图像大模型 OCR 识别的结构化抽取组件，通过父子块切分核心算法优化切片颗粒度，防止子块检索遗失完整的上下文边界。</li>
+                                <li><strong>专业评测体系指标交付</strong>：使用生产级大模型评测标准框架 Ragas 对全链路检索策略进行压测调优，运用混合检索策略成功使系统 <code>Recall@5</code>（前五项召回率）达到 89%，整体端到端对话延迟完美收敛在 3~5 秒。</li>
                             </ul>
                         </div>
                         
@@ -142,7 +142,52 @@
 
                     <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
                         <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-desktop mr-1"></i> Streamlit 可视化交互原型 (GIF)</span>
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="SmartRecruit 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4">
+                        <img src="./img/微信图片_2026-04-26_101746_233.jpg" alt="SmartRecruit 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80'">
+                        <div class="flex space-x-3 w-full">
+                            <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 mb-8 hover:shadow-lg transition duration-300">
+                <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-7 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center space-x-2 mb-3">
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">Ollama 本地化</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">ReAct 调度</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-800">ChromaDB</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">结构化输出增强</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">🤖 InsightScan 智扫通｜扫地机器人智能问答与报告生成 Agent 系统</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                <strong>项目描述：</strong> 专为扫地机器人量身定制的私有化大模型智能体系统。通过本地轻量大模型驱动，打通了“多源文档知识库问答（RAG）”与“外部业务数据库参数抽取生成报告”两条核心链路。
+                            </p>
+                            
+                            <h4 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">🔥 面试核心技术亮点：</h4>
+                            <ul class="list-disc list-inside text-sm text-gray-600 space-y-2.5 mb-4">
+                                <li><strong>基于 ReAct 的多工具路由调度</strong>：利用 LangChain 封装 ReAct 思考看板，让 Agent 具备根据用户意图自主决策的能力。当遇到设备操作疑问时路由至本地 RAG 工具，当收到“分析特定月份使用情况”时则自动切换至报告生成流。</li>
+                                <li><strong>多源数据融合 RAG 本地知识库</strong>：基于 ChromaDB 持久化向量库，支持 PDF、DOCX 硬件说明书及 CSV 格式的用户行为日志解析，使用 <code>bge-m3</code> 模型进行高性能本地 Embedding，提供高可用的设备知识检索问答。</li>
+                                <li><strong>端到端报告生成流水线</strong>：实现大模型参数提取机制。Agent 自动捕获用户自然语言中的 <code>User_ID</code> 与 <code>Month</code>，触发 Pandas 自动检索底层业务数据中的多维度清洁轨迹和报错频率，最终由 <code>Qwen3</code> 渲染输出深度定制的使用分析报告。</li>
+                                <li><strong>小模型工具调用容错增强（亮点）</strong>：针对本地轻量化模型 JSON 输出不稳定、易格式崩溃的问题，使用 <strong>Pydantic 协议硬约束</strong> 结合 <strong>自定义正则表达式防御解析网关</strong>，使小模型在离线私有化环境下的 Tool Calling 稳定性跃升。</li>
+                                <li><strong>多触点交互交付与生产级评测</strong>：后端基于 Flask 搭建标准的 Web 服务接口，前端快速构建 Gradio/Streamlit 可视化客户端；并通过 ROUGE、BERTScore 以及 Faithfulness（忠实度）指标建立了一套完善的 RAG 幻觉量化压测框架。</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-2 pt-4 border-t border-gray-100">
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">LangChain</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Ollama / Qwen3</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">ChromaDB</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Flask & Gradio</span>
+                            <span class="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs">Pydantic 容错</span>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 bg-gray-50 rounded-lg p-5 flex flex-col justify-center items-center border border-dashed border-gray-200">
+                        <span class="text-xs text-sky-500 font-semibold mb-2"><i class="fa-solid fa-code mr-1"></i> Gradio / Flask 运行看板</span>
+                        <img src="./img/insightscan-demo.jpg" alt="InsightScan 运行动态图" class="rounded shadow-sm max-h-48 object-cover mb-4" onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=600&q=80'">
                         <div class="flex space-x-3 w-full">
                             <a href="https://github.com/Agent2026-Li" target="_blank" class="flex-1 text-center bg-gray-900 text-white text-xs py-2 px-3 rounded hover:bg-gray-800 transition"><i class="fa-brands fa-github mr-1"></i> 浏览源码</a>
                         </div>
