@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李靖凯 · 个人作品集</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheets (order matters: base → components) -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/carousel.css">
+  <link rel="stylesheet" href="css/portfolio.css">
+  <link rel="stylesheet" href="css/stats.css">
+  <link rel="stylesheet" href="css/particles.css">
+  <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="主导航">
+    <div class="navbar__inner">
+      <a href="index.html#home" class="navbar__brand">L.J.K's Channel</a>
+
+      <ul class="navbar__links" role="list">
+        <li><a href="index.html#home">首页</a></li>
+        <li><a href="index.html#portfolio">作品</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="index.html#contact">联系</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <a href="mailto:2839577861@qq.com" class="btn-contact">联系我</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <!-- Background image layer -->
+    <div class="hero__bg-media" aria-hidden="true">
+      <img
+        src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=futuristic%20AI%20technology%20developer%20workspace%2C%20multiple%20screens%20with%20code%20and%20data%20visualizations%2C%20dark%20modern%20tech%20atmosphere%2C%20blue%20neon%20glow&image_size=landscape_16_9"
+        alt=""
+      >
+      <div class="hero__bg-overlay"></div>
+    </div>
+
+    <!-- Particle canvas layer -->
+    <canvas class="hero__particles" id="hero-particles"></canvas>
+
+    <!-- Content layer -->
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-reveal>欢迎来到我的个人网站</p>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line" data-reveal>你好，我是靖凯</span>
+      </h1>
+
+      <!-- Typing animation: role switcher -->
+      <div class="hero__typed-wrap" data-reveal>
+        <span class="hero__typed" id="hero-typed"></span>
+        <span class="hero__cursor"></span>
+      </div>
+
+      <p class="hero__desc" data-reveal">
+        专注构建高并发后端服务与 AI 智能应用，<br>
+        热爱技术与创造的完美结合。
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#portfolio" class="btn btn--dark">查看作品</a>
+        <a href="#contact" class="btn btn--outline-dark">联系我</a>
+      </div>
+
+      <div class="hero__social" data-reveal>
+        <a href="https://github.com/Agent2026-Li" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="javascript:void(0)" aria-label="微信" title="微信：19716344486" onclick="navigator.clipboard.writeText('19716344486').then(()=>alert('微信号已复制'))">
+          <i class="fa-brands fa-weixin"></i>
+        </a>
+        <a href="mailto:2839577861@qq.com" aria-label="邮箱"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#portfolio" class="hero__scroll-hint" aria-label="滚动至作品区">
+      <i class="fa-solid fa-arrow-down"></i>
+    </a>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio__container">
+      <header class="portfolio__header">
+        <h2 class="portfolio__title">项目作品</h2>
+        <p class="portfolio__subtitle">智能推荐 · AI Agent · 校园应用</p>
+      </header>
+
+      <!-- Cards are injected here by main.js -->
+      <div class="portfolio__grid" id="portfolio-grid" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats" id="stats">
+    <div class="stats__container">
+      <div class="stats__item">
+        <i class="fa-solid fa-diagram-project stats__icon"></i>
+        <span class="stats__number" data-target="4">0</span>
+        <span class="stats__label">项目经验</span>
+      </div>
+      <div class="stats__item">
+        <i class="fa-solid fa-code stats__icon"></i>
+        <span class="stats__number" data-target="30000">0</span>
+        <span class="stats__label">代码行数</span>
+      </div>
+      <div class="stats__item">
+        <i class="fa-solid fa-layer-group stats__icon"></i>
+        <span class="stats__number" data-target="12">0</span>
+        <span class="stats__label">技术栈</span>
+      </div>
+      <div class="stats__item">
+        <i class="fa-solid fa-mug-hot stats__icon"></i>
+        <span class="stats__number" data-target="500">0</span>
+        <span class="stats__label">杯咖啡</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact">
+    <div class="footer__inner">
+      <p class="footer__brand">L.J.K's Channel</p>
+      <p class="footer__copy">
+        © 2026 李靖凯 · 齐鲁工业大学 · 软件工程
+      </p>
+      <div class="footer__contact">
+        <span class="footer__contact-item">
+          <i class="fa-brands fa-weixin"></i> 19716344486
+        </span>
+        <span class="footer__contact-item">
+          <i class="fa-solid fa-envelope"></i> 2839577861@qq.com
+        </span>
+      </div>
+      <nav class="footer__social" aria-label="社交链接">
+        <a href="https://github.com/Agent2026-Li" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:2839577861@qq.com" aria-label="发送邮件">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Scripts: load order matters -->
+  <script src="js/data.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/typer.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

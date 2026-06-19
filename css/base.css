@@ -1,0 +1,145 @@
+/* ======================================================
+   BASE.CSS  –  CSS Variables · Reset · Global Utilities
+   ====================================================== */
+
+:root {
+  /* ---- Palette ---- */
+  --clr-bg:          #0a0a0a;
+  --clr-surface:     #141414;
+  --clr-card:        #1a1a1a;
+  --clr-hero:        #f4f3ee;
+  --clr-white:       #ffffff;
+  --clr-text:        rgba(255, 255, 255, 0.88);
+  --clr-muted:       rgba(255, 255, 255, 0.42);
+  --clr-border:      rgba(255, 255, 255, 0.07);
+  --clr-dark:        #0d0d0d;
+  --clr-nav-bg:      #ffffff;
+  --clr-nav-text:    #111111;
+
+  /* ---- Spacing scale ---- */
+  --sp-xs:  4px;
+  --sp-sm:  8px;
+  --sp-md:  16px;
+  --sp-lg:  24px;
+  --sp-xl:  40px;
+  --sp-2xl: 64px;
+  --sp-3xl: 96px;
+
+  /* ---- Typography ---- */
+  --font-display: 'Syne', 'Noto Sans SC', sans-serif;
+  --font-body:    'Inter', 'Noto Sans SC', system-ui, sans-serif;
+
+  /* ---- Layout ---- */
+  --nav-h:       60px;
+  --content-max: 1200px;
+
+  /* ---- Borders ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+
+  /* ---- Motion ---- */
+  --ease:       cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out:   cubic-bezier(0.00, 0.00, 0.20, 1.00);
+  --dur-fast:   150ms;
+  --dur-mid:    280ms;
+  --dur-slow:   500ms;
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol { list-style: none; }
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* ---- Buttons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition:
+    background var(--dur-mid) var(--ease),
+    color      var(--dur-mid) var(--ease),
+    transform  var(--dur-mid) var(--ease),
+    box-shadow var(--dur-mid) var(--ease);
+}
+
+/* Dark button — for light (hero) background */
+.btn--dark {
+  background: var(--clr-dark);
+  color: var(--clr-white);
+  border: 2px solid var(--clr-dark);
+}
+.btn--dark:hover {
+  background: #2a2a2a;
+  border-color: #2a2a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+/* Outline button — for light (hero) background */
+.btn--outline-dark {
+  background: transparent;
+  color: var(--clr-dark);
+  border: 2px solid rgba(0, 0, 0, 0.28);
+}
+.btn--outline-dark:hover {
+  border-color: var(--clr-dark);
+  background: rgba(0,0,0,0.04);
+  transform: translateY(-2px);
+}
+
+/* ---- Accessibility ---- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

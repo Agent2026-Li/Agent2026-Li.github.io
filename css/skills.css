@@ -1,0 +1,69 @@
+/* ======================================================
+   SKILLS.CSS  –  Animated skill bars (replaces hobbies)
+   ====================================================== */
+
+/* ===== Right column: skill bars ===== */
+.about__skills {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.skill-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-bar__name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-white);
+  letter-spacing: 0.01em;
+}
+
+.skill-bar__pct {
+  font-size: 0.78rem;
+  color: var(--clr-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Track */
+.skill-bar__track {
+  width: 100%;
+  height: 6px;
+  background: var(--clr-border);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+/* Fill – initial state (no width) */
+.skill-bar__fill {
+  height: 100%;
+  width: 0;
+  background: var(--clr-white);
+  border-radius: 100px;
+  transition: width 1.2s var(--ease-out);
+  will-change: width;
+}
+
+.skill-bar__fill.is-animated {
+  /* width is set by JS inline; this class triggers transition */
+}
+
+/* Category divider */
+.skill-bar__category {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--clr-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 6px;
+  margin-bottom: -8px;
+}
